@@ -24,6 +24,12 @@ curl -s http://shell.zhamao.xin/run/neofetch
 curl -s http://shell.zhamao.xin/manifest
 ```
 
+此外，有些指令可能需要交互的命令行，在查看帮助菜单时会给出红色名称提示。如果需要使用交互式输入的命令，需要使用以下方式执行：
+
+```bash
+bash -c "`curl -s http://shell.zhamao.xin/run/{name}`"
+```
+
 ## 支持的快速命令
 
 | 名称 | 说明 |
