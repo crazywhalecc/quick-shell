@@ -1,0 +1,29 @@
+{
+    "name": "crazywhalecc/quick-shell",
+    "description": "Run Shell Scripts as Fast as Possible",
+    "minimum-stability": "stable",
+    "license": "Apache-2.0",
+    "version": "1.0.0",
+    "type": "project",
+    "prefer-stable": true,
+    "require": {
+        "php": ">=7.4",
+        "zhamao/framework": "^2.4",
+        "ext-json": "*"
+    },
+    "require-dev": {
+        "swoole/ide-helper": "@dev"
+    },
+    "scripts": {
+        "post-create-project-cmd": "vendor/bin/start init",
+        "post-update-cmd": "vendor/bin/start check:config"
+    },
+    "autoload": {
+        "psr-4": {
+            "QuickShell\\": "src/QuickShell"
+        },
+        "files": [
+            "src/QuickShell/global_function.php"
+        ]
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "brew-update": {
+        "description": "更新Homebrew（测试命令）",
+        "command": "brew update"
+    },
+    "neofetch": {
+        "description": "在线运行neofetch",
+        "command": "curl -H 'User-Agent: Chrome' -s https://gitee.com/mirrors/neofetch/raw/master/neofetch | bash"
+    }
+}
