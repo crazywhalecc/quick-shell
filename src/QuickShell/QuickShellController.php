@@ -30,7 +30,8 @@ class QuickShellController
     public function index()
     {
         $response = implode("\n", QuickShellProvider::getInstance()->getShellList()) . PHP_EOL;
-        $response .= "执行:\tcurl -s http://shell.zhamao.xin/run/{name} | bash" . PHP_EOL;
+        $response .= "普通执行:\tcurl -s http://shell.zhamao.xin/run/{name} | bash" . PHP_EOL;
+        $response .= "交互执行:\tbash <(curl -s http://shell.zhamao.xin/run/{name})" . PHP_EOL;
         return $response;
     }
 

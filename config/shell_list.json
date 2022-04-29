@@ -5,6 +5,10 @@
     },
     "neofetch": {
         "description": "在线运行neofetch",
-        "command": "curl -H 'User-Agent: Chrome' -s https://gitee.com/mirrors/neofetch/raw/master/neofetch | bash"
+        "command": "bash <(curl -H 'User-Agent: Chrome' -s https://gitee.com/mirrors/neofetch/raw/master/neofetch)"
+    },
+    "ip": {
+        "description": "查看本机的公网IP",
+        "command": "curl -s http://ip.zhamao.xin"
     }
 }
