@@ -3,11 +3,10 @@
     "description": "Run Shell Scripts as Fast as Possible",
     "minimum-stability": "stable",
     "license": "Apache-2.0",
-    "version": "1.0.0",
     "type": "project",
     "prefer-stable": true,
     "require": {
-        "php": ">=7.4",
+        "php": ">=8.0",
         "zhamao/framework": "^2.4",
         "ext-json": "*"
     },

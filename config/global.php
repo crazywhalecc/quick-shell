@@ -4,6 +4,8 @@
 
 declare(strict_types=1);
 
+$config = [];
+
 /* bind host */
 $config['host'] = '127.0.0.1';
 
@@ -11,7 +13,7 @@ $config['host'] = '127.0.0.1';
 $config['port'] = 30001;
 
 /* 框架开到公网或外部的HTTP访问链接，通过 DataProvider::getFrameworkLink() 获取 */
-$config['http_reverse_link'] = 'http://shell.zhamao.xin/';
+$config['http_reverse_link'] = 'http://shell.zhamao.xin';
 
 /* 框架是否启动debug模式，当debug模式为true时，启用热更新（需要安装inotify扩展） */
 $config['debug_mode'] = false;
@@ -28,7 +30,7 @@ $config['crash_dir'] = $config['zm_data'] . 'crash/';
 /* 对应swoole的server->set参数 */
 $config['swoole'] = [
     'log_file' => $config['crash_dir'] . 'swoole_error.log',
-    // 'worker_num' => swoole_cpu_num(), //如果你只有一个 OneBot 实例连接到框架并且代码没有复杂的CPU密集计算，则可把这里改为1使用全局变量
+    'worker_num' => 1, //如果你只有一个 OneBot 实例连接到框架并且代码没有复杂的CPU密集计算，则可把这里改为1使用全局变量
     'dispatch_mode' => 2, // 包分配原则，见 https://wiki.swoole.com/#/server/setting?id=dispatch_mode
     'max_coroutine' => 300000,
     'max_wait_time' => 5,
