@@ -1,6 +1,6 @@
 # quick-shell
 
-一个通过 `curl`、管道、`bash` 实现的快速执行常用命令的工具，不在本地保存脚本。
+一个通过 `curl`、管道、`bash` 实现的快速执行常用命令的工具，不在本地硬盘保存脚本。
 
 比如想随时随地不安装使用 neofetch，直接执行以下一行命令：
 
@@ -9,12 +9,25 @@ curl -s http://shell.zhamao.xin/run/neofetch | bash
 ```
 
 ## 用法
+
+该项目由[炸毛框架](https://github.com/zhamao-robot/zhamao-framework)构建，所有数据均直接部署于炸毛所在的下载服务器上。
+
 ```bash
 # 根 URI 会返回一个帮助菜单，包含了所有可以快速执行的命令
 curl -s http://shell.zhamao.xin
 
 # /run 节点可以使用管道执行一个命令，如果命令不存在，则返回一个 echo 语句，避免报错，但做到了命令不存在的提示功能
 curl -s http://shell.zhamao.xin/run/{name} | bash
+
+# 也可以不使用管道，查看快速命令名称对应要执行的 shell 代码或查看本项目的元数据（如果你不放心命令的话）
+curl -s http://shell.zhamao.xin/run/neofetch
+curl -s http://shell.zhamao.xin/manifest
+```
+
+此外，有些指令可能需要交互的命令行，在查看帮助菜单时会给出红色名称提示。如果需要使用交互式输入的命令，需要使用以下方式执行：
+
+```bash
+bash -c "`curl -s http://shell.zhamao.xin/run/{name}`"
 ```
 
 ## 支持的快速命令
