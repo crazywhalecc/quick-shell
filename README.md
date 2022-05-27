@@ -38,6 +38,12 @@ bash <(curl -s http://shell.zhamao.xin/ctf/frpc/1.2.3.4:7001/127.0.0.1/22/50022)
 | `ctf/frpc` | 快速使用 frpc 代理一个内网穿透一个端口，提供一个目标的 IP 和 TCP 端口即可 |
 | ... | 持续更新中 |
 
+## 长啥样
+
+<img width="700" alt="未命名_副本" src="https://user-images.githubusercontent.com/20330940/170800524-0ced4fdb-97b0-4961-b281-3c96af334095.png">
+
+<img width="750" alt="未命名" src="https://user-images.githubusercontent.com/20330940/170800611-dd21a624-8160-4e6e-9c1e-3b3d6189f8c5.png">
+
 ## 贡献
 
 如果你觉得有常用的命令，可以提交到这个项目中，我会尽快添加到这个项目中。
