@@ -23,7 +23,7 @@ declare -i flag_skip # flag that prevents doing more than one operation on
 declare -i moves     # stores number of possible moves to determine if player lost 
                      # the game
 declare ESC=\$'\e'    # escape byte
-declare header="Bash 2048 v1.1 (https://github.com/mydzor/bash2048)"
+declare header="Bash 2048 v1.1 (https://github.com/mydzor/bash2048) CtrlC to stop |"
 
 declare -i start_time=\$(date +%s)
 
