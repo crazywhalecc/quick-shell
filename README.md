@@ -19,6 +19,9 @@ bash <(curl -s https://shell.zhamao.xin/neofetch)
 # 快速运行speedtest
 bash <(curl -s https://shell.zhamao.xin/speedtest)
 
+# 在终端用方向键玩 2048
+bash <(curl -s https://shell.zhamao.xin/game/2048)
+
 # 使用CTF工具箱（比如快速开启frp内网穿透）
 # 服务端，监听0.0.0.0:7001，假设我的公网服务器IP是1.2.3.4
 bash <(curl -s https://shell.zhamao.xin/ctf/frps/bind_addr=0.0.0.0/bind_port=7001)
@@ -36,6 +39,8 @@ bash <(curl -s https://shell.zhamao.xin/ctf/frpc/1.2.3.4:7001/127.0.0.1/22/50022
 | `ctf/reverse_shell` | 使用 bash 反弹 shell，提供一个目标的 IP 和 nc 端口即可 |
 | `ctf/frps` | 快速启动一个 frps 内网穿透服务器 |
 | `ctf/frpc` | 快速使用 frpc 代理一个内网穿透一个端口，提供一个目标的 IP 和 TCP 端口即可 |
+| `php_server` | 快速启动一个当前目录下的 Web 服务器（支持 PHP 脚本） |
+| `game/2048` | 在线游玩 2048 小游戏（终端） |
 | ... | 持续更新中 |
 
 ## 安全
