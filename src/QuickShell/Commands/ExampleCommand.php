@@ -19,7 +19,7 @@ class ExampleCommand
         return cmd("curl -s http://ip.zhamao.xin");
     }
 
-    #[Command('php_server', '在当前目录使用PHP启动一个服务器')]
+    #[Command('php_server', '在当前目录使用PHP启动一个Web服务器')]
     #[CommandOption(option_name: 'port', description: '端口号', required: true)]
     public function phpServer(array $params)
     {
